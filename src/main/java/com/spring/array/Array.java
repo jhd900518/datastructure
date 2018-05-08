@@ -29,7 +29,7 @@ public class Array<T> {
         return size == 0;
     }
 
-    T get(int index) {
+    public T get(int index) {
         if (index < 0 || index >= size) {
             throw new IllegalArgumentException("Get failed,Index is illegal");
         }
@@ -131,5 +131,13 @@ public class Array<T> {
             newData[i] = data[i];
         }
         data = newData;
+    }
+
+    public T getLast() {
+        return get(size - 1);
+    }
+
+    public T getFirst() {
+        return get(0);
     }
 }
